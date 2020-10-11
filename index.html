@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+      <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Chandra Maloo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <meta name="Description" content="This is the official homepage of Chandra Maloo"/>
+	    <meta name="keywords" content="chandra, maloo, IIT Bombay, samsung, computer science"/>
+	    <meta name="viewport" content="width=1024,initial-scale=1.00, minimum-scale=1.00">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <link rel="stylesheet" href="css/index.css"/>
+	    <link rel="stylesheet" href="css/bootstrap.css" />
+	    <script type="text/javascript" src="js/jquery.js"></script>
+	    <script type="text/javascript" src="js/index.js"></script>
+	</head>
+	<body>
+		<div id="navbar">
+			<span onClick="tab_change(1)"><button type="button" class="btn btn-primary btn-block">Home</button></span><br>
+			<span onClick="tab_change(2)"><button type="button" class="btn btn-primary btn-block">Contact</button></span><br>
+<!--			<span onClick="tab_change(4)"><button type="button" class="btn btn-primary btn-block">Achievements</button></span><br> -->
+			<span onClick="tab_change(5)"><button type="button" class="btn btn-primary btn-block">Projects</button></span><br> 
+			<span onClick="tab_change(6)"><button type="button" class="btn btn-primary btn-block">Courses</button></span><br>
+			<span onClick="tab_change(7)"><button type="button" class="btn btn-primary btn-block">Blogs</button></span><br><br>                                
+</div>	
+		<object id="frame" type="text/html" data="" style="width:100%; height:100%"></object>
+		<script type="text/javascript">
+		  var elem = document.getElementById("frame"); 
+		  elem.setAttribute("data", "pages/home.html"); 
+
+		  function tab_change(i){
+		  	var attr;
+		  	switch(i){
+			  	case 1: attr = "pages/home.html"; break;
+			  	case 2: attr = "pages/contact.html"; break;
+			  	case 4: attr = "pages/achievements.html"; break;
+			  	case 5: attr = "pages/projects.html"; break;
+			  	case 6: attr = "pages/courses.html"; break;
+			  	case 7: attr = "pages/blog.html"; break;
+			  }
+			var element = document.getElementById("frame");
+			element.setAttribute("data", attr);
+		  }
+		</script>
+	</body>
+</html>
