@@ -361,6 +361,113 @@ h1 {
   outline-color: #b4d3e2;
 }
 
+.analytics-consent {
+  position: fixed;
+  right: 26px;
+  bottom: 26px;
+  z-index: 3;
+  width: min(410px, calc(100% - 40px));
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.analytics-consent[hidden],
+.analytics-settings[hidden] {
+  display: none;
+}
+
+.analytics-title {
+  margin: 0 0 9px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.analytics-description {
+  margin: 0 0 19px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.analytics-description a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.analytics-description a:hover,
+.analytics-description a:focus-visible {
+  text-decoration: underline;
+}
+
+.analytics-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.analytics-button,
+.analytics-settings {
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.analytics-button {
+  padding: 11px 16px;
+}
+
+.analytics-button.allow {
+  color: var(--surface);
+  background: var(--accent);
+}
+
+.analytics-button.allow:hover,
+.analytics-button.allow:focus-visible {
+  background: var(--accent-dark);
+}
+
+.analytics-button.decline {
+  color: var(--accent);
+  background: transparent;
+}
+
+.analytics-button.decline:hover,
+.analytics-button.decline:focus-visible {
+  color: var(--surface);
+  background: var(--accent);
+}
+
+.analytics-button:focus-visible,
+.analytics-settings:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.analytics-settings {
+  position: fixed;
+  right: 24px;
+  bottom: 22px;
+  z-index: 3;
+  padding: 10px 15px;
+  color: var(--muted);
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 8px 26px rgba(19, 26, 39, 0.08);
+}
+
+.analytics-settings:hover,
+.analytics-settings:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 .not-found {
   min-height: 100vh;
   padding: 40px;
@@ -475,5 +582,20 @@ h1 {
 
   .not-found-card {
     padding: 52px 26px;
+  }
+
+  .analytics-consent {
+    right: 20px;
+    bottom: 20px;
+    padding: 21px;
+  }
+
+  .analytics-actions {
+    flex-direction: column;
+  }
+
+  .analytics-settings {
+    right: 20px;
+    bottom: 18px;
   }
 }
