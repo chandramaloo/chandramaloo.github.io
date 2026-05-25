@@ -87,8 +87,7 @@ a:focus-visible {
   color: var(--ink);
 }
 
-main,
-.site-footer {
+main {
   max-width: 1120px;
   margin: 0 auto;
   padding-left: 40px;
@@ -226,6 +225,20 @@ h1 {
   line-height: 1.08;
 }
 
+.writing {
+  display: block;
+}
+
+.writing-header {
+  margin-bottom: 38px;
+}
+
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .article-card {
   padding: 28px;
   background: var(--background);
@@ -239,31 +252,47 @@ h1 {
 }
 
 .article-card h3 {
-  margin: 0 0 36px;
+  min-height: 64px;
+  margin: 0 0 30px;
   font-size: 23px;
   font-weight: 500;
   line-height: 1.4;
 }
 
-.article-card a {
+.article-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.article-links a {
   color: var(--accent);
   font-size: 14px;
   font-weight: 600;
 }
 
-.article-card a span {
+.article-links a span {
   display: inline-block;
   margin-left: 8px;
   transition: transform 160ms ease;
 }
 
-.article-card a:hover span,
-.article-card a:focus-visible span {
+.article-links a:hover span,
+.article-links a:focus-visible span {
   transform: translateX(4px);
 }
 
+.article-status {
+  min-height: 34px;
+  margin: -17px 0 13px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
 .contact {
-  margin-bottom: 72px;
+  margin-bottom: 48px;
   color: var(--surface);
   background: var(--ink);
   border-color: var(--ink);
@@ -304,16 +333,6 @@ h1 {
   outline-color: #b4d3e2;
 }
 
-.site-footer {
-  padding-bottom: 36px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.site-footer p {
-  margin: 0;
-}
-
 .not-found {
   min-height: 100vh;
   padding: 40px;
@@ -345,8 +364,7 @@ h1 {
 
 @media (max-width: 900px) {
   .nav,
-  main,
-  .site-footer {
+  main {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -371,6 +389,14 @@ h1 {
     padding: 42px 30px;
     grid-template-columns: 1fr;
     gap: 34px;
+  }
+
+  .article-list {
+    grid-template-columns: 1fr;
+  }
+
+  .article-card h3 {
+    min-height: 0;
   }
 }
 
