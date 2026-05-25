@@ -9,7 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css?v=20260525-analytics">
+    <link rel="stylesheet" href="css/index.css?v=20260525-analytics-clean">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZG590518R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-DZG590518R");
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -137,19 +144,5 @@
         </div>
       </section>
     </main>
-
-    <aside class="analytics-consent" data-analytics-banner role="dialog" aria-labelledby="analytics-title" aria-describedby="analytics-description" hidden>
-      <p class="analytics-title" id="analytics-title">Optional analytics</p>
-      <p class="analytics-description" id="analytics-description">
-        I use Google Analytics to understand visits to this site. It runs only if you allow it.
-        <a href="https://support.google.com/analytics/answer/6004245?hl=en" target="_blank" rel="noopener noreferrer">Learn more</a>
-      </p>
-      <div class="analytics-actions">
-        <button class="analytics-button allow" type="button" data-analytics-allow>Allow analytics</button>
-        <button class="analytics-button decline" type="button" data-analytics-decline>Decline</button>
-      </div>
-    </aside>
-    <button class="analytics-settings" type="button" data-analytics-settings hidden>Analytics settings</button>
-    <script src="js/analytics.js" defer></script>
   </body>
 </html>
