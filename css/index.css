@@ -283,14 +283,6 @@ h1 {
   transform: translateX(4px);
 }
 
-.article-status {
-  min-height: 34px;
-  margin: -17px 0 13px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.4;
-}
-
 .contact {
   margin-bottom: 48px;
   color: var(--surface);
