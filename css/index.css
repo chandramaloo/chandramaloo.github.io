@@ -225,11 +225,12 @@ h1 {
   line-height: 1.08;
 }
 
-.writing {
+.writing,
+.appearances {
   display: block;
 }
 
-.writing-header {
+.section-header {
   margin-bottom: 38px;
 }
 
@@ -281,6 +282,41 @@ h1 {
 .article-links a:hover span,
 .article-links a:focus-visible span {
   transform: translateX(4px);
+}
+
+.media-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-card h3 {
+  min-height: 98px;
+  margin-bottom: 16px;
+}
+
+.media-description {
+  min-height: 114px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.media-badge {
+  width: fit-content;
+  margin: auto 0 0;
+  padding: 9px 13px;
+  color: var(--accent);
+  background: rgba(30, 78, 103, 0.08);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .contact {
@@ -383,11 +419,14 @@ h1 {
     gap: 34px;
   }
 
-  .article-list {
+  .article-list,
+  .media-list {
     grid-template-columns: 1fr;
   }
 
-  .article-card h3 {
+  .article-card h3,
+  .media-card h3,
+  .media-description {
     min-height: 0;
   }
 }
@@ -398,8 +437,8 @@ h1 {
   }
 
   .nav-links {
-    gap: 18px;
-    font-size: 14px;
+    gap: 13px;
+    font-size: 13px;
   }
 
   .hero {
