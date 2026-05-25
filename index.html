@@ -1,44 +1,83 @@
-<!DOCTYPE html>
-      <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-	<head>
-		<title>Chandra Maloo</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	    <meta name="Description" content="This is the official homepage of Chandra Maloo"/>
-	    <meta name="keywords" content="chandra, maloo, IIT Bombay, samsung, computer science"/>
-	    <meta name="viewport" content="width=1024,initial-scale=1.00, minimum-scale=1.00">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	    <link rel="stylesheet" href="css/index.css"/>
-	    <link rel="stylesheet" href="css/bootstrap.css" />
-	    <script type="text/javascript" src="js/jquery.js"></script>
-	    <script type="text/javascript" src="js/index.js"></script>
-	</head>
-	<body>
-		<div id="navbar">
-			<span onClick="tab_change(1)"><button type="button" class="btn btn-primary btn-block">Home</button></span><br>
-			<span onClick="tab_change(2)"><button type="button" class="btn btn-primary btn-block">Contact</button></span><br>
-<!--			<span onClick="tab_change(4)"><button type="button" class="btn btn-primary btn-block">Achievements</button></span><br> -->
-			<span onClick="tab_change(5)"><button type="button" class="btn btn-primary btn-block">Projects</button></span><br> 
-			<span onClick="tab_change(6)"><button type="button" class="btn btn-primary btn-block">Courses</button></span><br>
-			<span onClick="tab_change(7)"><button type="button" class="btn btn-primary btn-block">Blogs</button></span><br><br>                                
-</div>	
-		<object id="frame" type="text/html" data="" style="width:100%; height:100%"></object>
-		<script type="text/javascript">
-		  var elem = document.getElementById("frame"); 
-		  elem.setAttribute("data", "pages/home.html"); 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chandra Maloo</title>
+    <meta name="description" content="Chandra Maloo - computer scientist and technology professional based in South Korea.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="/" aria-label="Chandra Maloo home">CM</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#writing">Writing</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-		  function tab_change(i){
-		  	var attr;
-		  	switch(i){
-			  	case 1: attr = "pages/home.html"; break;
-			  	case 2: attr = "pages/contact.html"; break;
-			  	case 4: attr = "pages/achievements.html"; break;
-			  	case 5: attr = "pages/projects.html"; break;
-			  	case 6: attr = "pages/courses.html"; break;
-			  	case 7: attr = "pages/blog.html"; break;
-			  }
-			var element = document.getElementById("frame");
-			element.setAttribute("data", attr);
-		  }
-		</script>
-	</body>
+    <main>
+      <section class="hero" id="about">
+        <div class="hero-copy">
+          <p class="eyebrow">Computer science / technology</p>
+          <h1>Chandra<br>Maloo</h1>
+          <p class="intro">
+            Born and raised in Nagpur, India, I studied Computer Science at IIT Bombay.
+            I later moved to South Korea to work at Samsung Electronics on technology
+            that improves everyday user experiences.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://www.linkedin.com/in/chandramaloo" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+            <a class="button secondary" href="https://github.com/chandramaloo" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+          </div>
+        </div>
+        <figure class="portrait">
+          <img src="images/profile.png" alt="Chandra Maloo">
+        </figure>
+      </section>
+
+      <section class="panel writing" id="writing" aria-labelledby="writing-title">
+        <div>
+          <p class="eyebrow">Selected writing</p>
+          <h2 id="writing-title">Experiences in technology</h2>
+        </div>
+        <article class="article-card">
+          <p class="article-meta">Internship experience</p>
+          <h3>Samsung Electronics, South Korea</h3>
+          <a href="https://insightiitb.org/samsung-korea-chandra-maloo/" target="_blank" rel="noopener noreferrer">Read the article <span aria-hidden="true">&rarr;</span></a>
+        </article>
+      </section>
+
+      <section class="panel contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Find me online</h2>
+        </div>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/chandramaloo" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://github.com/chandramaloo" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://twitter.com/ChandraMaloo" target="_blank" rel="noopener noreferrer">
+            <span>Twitter</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Chandra Maloo</p>
+    </footer>
+  </body>
 </html>
